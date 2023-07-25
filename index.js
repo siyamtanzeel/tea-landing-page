@@ -1,14 +1,22 @@
 const modeToggle = document.querySelector("#mode-toggle");
 const swap = document.querySelector('.swap');
+const drawerSide = document.querySelector('.drawer-side');
+const myDrawer = document.querySelector('#my-drawer');
 swap.addEventListener('click',()=>{
     if(modeToggle.checked){
-        document.querySelector('html').setAttribute('data-theme','dark')
+        document.querySelector('html').classList.add('dark');
     }
     else{
-        document.querySelector('html').setAttribute('data-theme','light')
+        document.querySelector('html').classList.remove('dark');
     }
 })
-// else{
 
-// }
-
+// myDrawer.addEventListener('click',()=>{
+//     if(myDrawer.checked){
+//         drawerSide.classList.add('dark:bg-slate-950')
+            
+//     }
+//     else{
+//         drawerSide.classList.remove('dark:bg-slate-950');
+//     }
+// })

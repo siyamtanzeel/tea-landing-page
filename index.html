@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tea House</title>
-    <link rel="stylesheet" href="build.css">
+    <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <nav class="navbar bg-base-100 sticky top-0 left-0 z-50">
+<body class="bg-white dark:bg-slate-900">
+    <nav class="navbar bg-base-100 dark:bg-slate-950 dark:text-white sticky top-0 left-0 z-50">
         <div class="navbar-start">
           <div class="dropdown">
             
@@ -19,9 +19,10 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                   </label>
                 </div> 
-                <div class="drawer-side">
+                <!-- mobile drawer -->
+                <div class="drawer-side ">
                   <label for="my-drawer" class="drawer-overlay"></label>
-                  <ul class="menu p-4 w-3/4 h-full bg-base-200 text-base-content">
+                  <ul class="menu p-4 w-1/2 md:w-1/3 h-full bg-base-200 dark:bg-slate-950 text-gray-500">
                     <!-- Sidebar content here -->
                     <li><a>Home</a></li>
                     <li><a>Featured</a></li>
@@ -58,15 +59,16 @@
         </div>
     </nav>
     <!-- nav ends here -->
-    <main>
-        <section class="hero bg-base max-w-6xl mx-auto">
+    <main class="mx-auto">
+        <!-- banner starts here -->
+        <section class="hero bg-base max-w-6xl mx-auto" id="banner">
             <div class="hero-content flex-col md:flex-row-reverse ">
               <div class="rounded-lg md:w-1/2 flex-shrink-0 flex flex-col items-center justify-center">
                 <img src="images/banner.png" alt="">
-                <div class="card w-64 bottom-10 md:bottom-16 h-min bg-base-100 flex flex-row-reverse drop-shadow-md dark:bg-base-200">
-                  <div class="card-body">
-                    <h2 class="card-title">5.00</h2>
-                    <p>Trust Pilot Ratings</p>
+                <div class="card w-64 bottom-10 md:bottom-16 h-min flex flex-row-reverse bg-base-100 dark:bg-slate-800 drop-shadow-lg">
+                  <div class="card-body -space-y-3">
+                    <h2 class="card-title font-bold text-2xl dark:text-white">5.00</h2>
+                    <p class="text-gray-500">Trust Pilot Ratings</p>
                   </div>
                   <figure class="px-2"><svg width="48" height="46" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M42.4416 13.778L29.9033 12.6152L24.9228 1.04987C24.574 0.240051 23.4259 0.240051 23.0772 1.04987L18.0966 12.6151L5.5584 13.778C4.68043 13.8594 4.32568 14.9514 4.98802 15.5333L14.4482 23.8439L11.6796 36.1279C11.4858 36.988 12.4147 37.6629 13.1728 37.2128L24 30.7838L34.8272 37.2128C35.5854 37.663 36.5141 36.988 36.3204 36.1279L33.5517 23.8439L43.012 15.5333C43.6743 14.9514 43.3195 13.8594 42.4416 13.778Z" fill="#FFDC64"/>
@@ -80,14 +82,50 @@
                   </figure>
                 </div>
               </div>
-              <div>
-                <h1 class="text-5xl  font-bold">It's good tea time at The Tea House</h1>
-                <p class="py-6 text-gray-500">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
+              <div class="banner-contents text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-bold text-zinc-900 dark:text-white">It's good <br> tea time at The <br> Tea House</h1>
+                <p class="py-6 text-gray-400 lg:pr-28">Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.</p>
                 <button class="btn bg-gradient-to-r from-orange-500 to-red-600 text-white">Explore more</button>
               </div>
             </div>
         </section>
-
+        <section class="mt-10 mx-auto max-w-6xl flex flex-col items-center justify-center space-y-20" id="featured" >
+          <div class="featured-intro text-center space-y-5 ">
+            <h3 class="text-zinc-900 text-4xl font-bold dark:text-white">Our Featured Products</h3>
+            <p class="text-gray-400 px-2 md:px-20 lg:px-36">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+          </div>
+          <!-- products-container -->
+          <div class="products grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-10">
+            <div class="card card-compact w-72 space-y-5 shadow-none bg-zinc-100 dark:bg-slate-800 text-center py-5">
+              <figure><img src="/images/tea-1.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title justify-center text-xl font-bold dark:text-white">Milk Tea</h2>
+                <p class="text-gray-500">Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+            <div class="card card-compact w-72 space-y-5 shadow-none bg-zinc-100 dark:bg-slate-800 text-center py-5">
+              <figure><img src="/images/tea-2.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title justify-center text-xl font-bold dark:text-white">Milk Tea</h2>
+                <p class="text-gray-500">Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+            <div class="card card-compact w-72 space-y-5 shadow-none bg-zinc-100 dark:bg-slate-800 text-center py-5">
+              <figure><img src="/images/tea-3.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title justify-center text-xl font-bold dark:text-white">Milk Tea</h2>
+                <p class="text-gray-500">Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+            <div class="card card-compact w-72 space-y-5 shadow-none bg-zinc-100 dark:bg-slate-800 text-center py-5">
+              <figure><img src="/images/tea-4.png" alt="Shoes" /></figure>
+              <div class="card-body">
+                <h2 class="card-title justify-center text-xl font-bold dark:text-white">Milk Tea</h2>
+                <p class="text-gray-500">Creamer could be replaced by fresh milk</p>
+              </div>
+            </div>
+          </div>
+        </section>
     </main>
       <script src="index.js"></script>
 </body>
